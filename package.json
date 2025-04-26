@@ -1,0 +1,44 @@
+{
+  "name": "tailwindcss-clojure-class-sorter",
+  "displayName": "Tailwind CSS Clojure Class Sorter",
+  "description": "Sorts Tailwind CSS classes in Clojure files.",
+  "version": "0.1.0",
+  "publisher": "viesheimeobe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garrett-hopper/tailwindcss-clojure-class-sorter.git"
+  },
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "main": "index.js",
+  "activationEvents": [
+    "onLanguage:clojure"
+  ],
+  "contributes": {
+    "codeActions": [
+      {
+        "language": "clojure",
+        "kind": "source.sortTailwindClasses",
+        "title": "Sort Tailwind Classes",
+        "description": "Sorts Tailwind CSS classes."
+      }
+    ],
+    "configuration": {
+      "title": "Tailwind CSS Clojure Class Sorter",
+      "properties": {
+        "tailwindCssClojureClassSorter.tailwindCssPath": {
+          "type": "string",
+          "default": "",
+          "description": "Relative path to the Tailwind CSS file that defines your design system. When empty, the extension falls back to <workspace>/node_modules/tailwindcss/theme.css.",
+          "scope": "resource"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "enhanced-resolve": "^5.18.1",
+    "tailwindcss": "^4.0.0"
+  }
+}
