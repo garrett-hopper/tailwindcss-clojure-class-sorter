@@ -2,6 +2,8 @@
 
 A VSCode extension that provides a source action to sort Tailwind CSS classes within your Clojure code, including Hiccup templates.
 
+[**Install from VS Code Marketplace**](https://marketplace.visualstudio.com/items?itemName=viesheimeobe.tailwindcss-clojure-class-sorter)
+
 ## Features
 
 - **Sort Tailwind Classes:** Provides a `source.sortTailwindClasses` source action that sorts Tailwind CSS classes.
@@ -16,9 +18,9 @@ Ensure you have `tailwindcss` listed as a dependency in your `package.json` and 
 // package.json
 {
   "devDependencies": {
-    "tailwindcss": "^4.0.0",
+    "tailwindcss": "^4.0.0"
     // ... Tailwind plugins like @tailwindcss/forms, etc.
-  },
+  }
 }
 ```
 
@@ -39,8 +41,8 @@ It's recommended to configure the following settings in your project's `.vscode/
 
   // Optional: Automatically run the sorter on save.
   "editor.codeActionsOnSave": {
-    "source.sortTailwindClasses": "always", // or "explicit"
-  },
+    "source.sortTailwindClasses": "always" // or "explicit"
+  }
 }
 ```
 
@@ -52,7 +54,7 @@ To enhance your development experience with Tailwind CSS in Clojure, it's highly
 {
   // Tell the Tailwind extension to treat Clojure(Script) files like HTML
   "tailwindCSS.includeLanguages": {
-    "clojure": "html",
+    "clojure": "html"
   },
   // Configure class detection patterns for Clojure
   "[clojure]": {
@@ -68,9 +70,9 @@ To enhance your development experience with Tailwind CSS in Clojure, it's highly
       ["\\[:[\\w-]*(?:#[\\w-]+)?((?:\\.[\\w-]+)+)(?=[\\s\\]])", "\\.([\\w-]+)"],
       // Matches keyword selectors:
       // :.cls-1.cls-2
-      [":((?:\\.[\\w-]+)+)", "\\.([\\w-]+)"],
-    ],
-  },
+      [":((?:\\.[\\w-]+)+)", "\\.([\\w-]+)"]
+    ]
+  }
 }
 ```
 
